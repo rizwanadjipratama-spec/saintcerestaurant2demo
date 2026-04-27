@@ -2,10 +2,10 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Section from "./Section";
 import { cn } from "@/lib/utils";
-import { X, ChevronRight, Info } from "lucide-react";
+import { X, Info } from "lucide-react";
 
 const SIGNATURE_DISHES = [
   {
@@ -82,7 +82,6 @@ const MENU_CATEGORIES = [
 export default function Menu() {
   const [selectedDish, setSelectedDish] = useState<typeof SIGNATURE_DISHES[0] | null>(null);
   const [activeCategory, setActiveCategory] = useState(MENU_CATEGORIES[0].id);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // Handle scroll spy for categories
   useEffect(() => {
@@ -130,11 +129,11 @@ export default function Menu() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-20 space-y-4">
             <motion.span 
-              initial={{ opacity: 0, tracking: "0.5em" }}
-              whileInView={{ opacity: 1, tracking: "0.3em" }}
+              initial={{ opacity: 0, letterSpacing: "0.5em" }}
+              whileInView={{ opacity: 1, letterSpacing: "0.3em" }}
               className="text-brand-gold uppercase text-sm font-bold block"
             >
-              Chef's Masterpieces
+              Chef&apos;s Masterpieces
             </motion.span>
             <h2 className="text-5xl md:text-7xl font-heading font-bold text-brand-cream">
               The <span className="text-brand-gold italic">Signatures</span>
@@ -305,7 +304,7 @@ export default function Menu() {
               </div>
 
               <div className="p-10 lg:p-16 flex flex-col justify-center space-y-6">
-                <span className="text-brand-gold font-bold tracking-widest text-xs uppercase">Chef's Special</span>
+                <span className="text-brand-gold font-bold tracking-widest text-xs uppercase">Chef&apos;s Special</span>
                 <h2 className="text-4xl font-heading font-bold text-brand-black">{selectedDish.name}</h2>
                 <div className="text-3xl font-heading font-bold text-brand-gold">{selectedDish.price}</div>
                 <p className="text-brand-gray leading-relaxed">{selectedDish.details}</p>

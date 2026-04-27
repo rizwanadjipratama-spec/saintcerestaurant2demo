@@ -20,6 +20,15 @@ export const metadata: Metadata = {
   description: "Experience modern premium dining at Saintce. Fine cuisine, elegant ambiance, and unforgettable memories in the heart of the city.",
   keywords: ["restaurant", "fine dining", "Saintce", "modern dining", "reservation", "gastronomy"],
   authors: [{ name: "Saintce Team" }],
+  appleWebApp: {
+    title: "saintce",
+  },
+  icons: {
+    icon: [
+      { url: "/icon1.png", type: "image/png" },
+      { url: "/icon0.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export const viewport = {

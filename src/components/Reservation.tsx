@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, Calendar, Users, Clock, Send } from "lucide-react";
 import Image from "next/image";
 
-import Link from "next/link";
 
 export default function Reservation() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -138,7 +137,7 @@ export default function Reservation() {
                       <div className="space-y-2">
                         <h3 className="text-2xl font-heading font-bold text-brand-gold">Booking Confirmed!</h3>
                         <p className="text-brand-cream/60">
-                          We've received your request. A confirmation email and SMS will be sent shortly. 
+                          We&apos;ve received your request. A confirmation email and SMS will be sent shortly. 
                           We look forward to serving you!
                         </p>
                       </div>

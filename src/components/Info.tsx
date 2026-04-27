@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Section from "./Section";
 import { motion, AnimatePresence } from "framer-motion";
-import { Quote, ChevronDown, Phone, Mail, MapPin, Camera, Share2, X } from "lucide-react";
+import { Quote, ChevronDown, Phone, Mail, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const TESTIMONIALS = [
@@ -61,7 +61,7 @@ export default function Info() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {TESTIMONIALS.map((t, idx) => (
               <div key={idx} className="space-y-6 text-center md:text-left">
-                <p className="text-brand-cream/70 italic text-lg leading-relaxed">"{t.content}"</p>
+                <p className="text-brand-cream/70 italic text-lg leading-relaxed">&quot;{t.content}&quot;</p>
                 <div className="pt-4 border-t border-brand-gold/20">
                   <h4 className="font-heading font-bold text-brand-gold">{t.name}</h4>
                   <p className="text-xs uppercase tracking-widest text-brand-cream/40">{t.role}</p>
